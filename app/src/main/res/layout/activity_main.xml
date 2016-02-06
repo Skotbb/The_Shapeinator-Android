@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.scott.theshapinator.MainActivity"
+    android:background="#d6d6d6">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/selectorLayout"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_weight="1"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/selectText"
+            android:id="@+id/selectTextView"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shapeSpinner"
+            android:spinnerMode="dropdown"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calcText"
+            android:id="@+id/calcButton"
+            android:layout_gravity="bottom|center_horizontal"
+            android:onClick="calcButton" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/selectorLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/dimensionLayout"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#d6d6d6">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/widthText"
+            android:id="@+id/widthTextView"
+            android:textSize="18dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="bottom|right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lengthText"
+            android:id="@+id/heightTextView"
+            android:textSize="18dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="bottom|right" />
+
+        <EditText
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:id="@+id/lengthEditText"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="left|bottom"
+            android:paddingLeft="10dp" />
+
+        <EditText
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:id="@+id/widthEditText"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="left|bottom"
+            android:paddingLeft="10dp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/resultsLayout"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perimeterText"
+            android:id="@+id/perimeterLabelTextView"
+            android:textSize="18dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="bottom|right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="________________"
+            android:id="@+id/perimeterDisplayTextView"
+            android:layout_alignBottom="@+id/perimeterLabelTextView"
+            android:textSize="20dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="left|bottom"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/areaText"
+            android:id="@+id/areaLabelTextView"
+            android:textSize="18dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="bottom|right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/areaDisplayTextView"
+            android:layout_alignBottom="@+id/areaLabelTextView"
+            android:textSize="20dp"
+            android:text="________________"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="left|bottom"
+            android:paddingLeft="10dp" />
+    </GridLayout>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">The Shapinator</string>
+    <string name="selectText">Select your shape</string>
+    <string name="squareText">Square</string>
+    <string name="circleText">Circle</string>
+    <string name="triangleText">Triangle</string>
+    <string name="lengthText">Length:</string>
+    <string name="widthText">Width:</string>
+    <string name="areaText">Area:</string>
+    <string name="perimeterText">Perimeter:</string>
+    <string name="circumText">Circumference</string>
+    <string name="baseText">Base:</string>
+    <string name="heightText">Height:</string>
+    <string name="radiusText">Radius:</string>
+    <string name="calcText">Shapeinate</string>
+    <string-array name="shapes">
+        <item>Square</item>
+        <item>Circle</item>
+        <item>Triangle</item>
+    </string-array>
+
+
+
+
+</resources>
