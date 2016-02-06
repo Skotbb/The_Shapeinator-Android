@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         editor.putString("width", width);
         editor.putString("are", area);
         editor.putString("perimeter", perimeter);
-        editor.putInt("pos",pos);
+
         editor.commit();
 
         super.onPause();
@@ -193,11 +193,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         pos = m_shapeDrop.getSelectedItemPosition();
         switch(pos){
-            case 0 : {setSquare();calcSquare();}
+            case 0 : {setSquare();
+                length = savedValues.getString("length", "");
+                width = savedValues.getString("width", "");
+                m_lengthEditText.setText(length);
+                m_widthEditText.setText(width);
+                calcSquare();}
             break;
-            case 1 : {setCircle();calcCircle();}
+            case 1 : {setCircle();
+                length = savedValues.getString("length", "");   //For Radius
+
+                m_lengthEditText.setText(length);   //Set text what it was
+
+                calcCircle();}
             break;
-            case 2 : {setTriangle();calcTriangle();}
+            case 2 : {setTriangle();
+                length = savedValues.getString("length", "");   //For height
+                width = savedValues.getString("width", "");     //For base
+                m_lengthEditText.setText(length);
+                m_widthEditText.setText(width);
+                calcTriangle();}
             break;
         }
     }
