@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         double length=0,width=0, area=0,perimeter=0;
 
             //Parse numbers from fields
-        if(m_lengthEditText.getText().length() > 0) {
+        if(m_lengthEditText.getText().length() > 0 && m_widthEditText.getText().length() > 0) {
             length = Double.parseDouble(m_lengthEditText.getText().toString());
             width = Double.parseDouble(m_widthEditText.getText().toString());
             //Calculate results
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         double length=0,width=0, area=0,perimeter=0;
 
         //Parse numbers from fields
-        if(m_lengthEditText.getText().length() > 0) {
+        if(m_lengthEditText.getText().length() > 0 && m_widthEditText.getText().length() > 0) {
             length = Double.parseDouble(m_lengthEditText.getText().toString());
             width = Double.parseDouble(m_widthEditText.getText().toString());
             //Calculate results
@@ -169,17 +169,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         SharedPreferences.Editor editor = savedValues.edit();
 
         length = m_lengthEditText.getText().toString();
-        if (m_widthEditText.getText().length() > 0){
+        if (m_shapeDrop.getSelectedItemPosition()!= 1){
             width = m_widthEditText.getText().toString();
         }
-        area = m_areaDisplayTextView.getText().toString();
-        perimeter = m_perimeterDisplayTextView.getText().toString();
-        pos = m_shapeDrop.getSelectedItemPosition();
 
         editor.putString("length", length);
         editor.putString("width", width);
-        editor.putString("are", area);
-        editor.putString("perimeter", perimeter);
 
         editor.commit();
 

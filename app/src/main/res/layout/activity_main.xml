@@ -41,9 +41,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/shapeSpinner"
                 android:spinnerMode="dropdown"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_gravity="center_horizontal" />
 
             <Button
